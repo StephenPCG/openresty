@@ -1,0 +1,4 @@
+debian/build-openresty/usr/sbin/nginx usr/sbin
+debian/build-openresty/usr/share/nginx/ usr/share/
+debian/build-openresty/bundle/nginx-*/conf/* etc/nginx
+debian/nginx.conf etc/nginx

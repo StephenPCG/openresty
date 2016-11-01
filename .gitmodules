@@ -1,0 +1,8 @@
+[submodule "debian/modules/nginx-module-vts"]
+	path = debian/modules/nginx-module-vts
+	url = https://github.com/vozlt/nginx-module-vts.git
+	branch = master
+[submodule "debian/modules/nginx-rtmp-module"]
+	path = debian/modules/nginx-rtmp-module
+	url = https://github.com/arut/nginx-rtmp-module.git
+	branch = master

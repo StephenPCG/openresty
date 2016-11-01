@@ -1,0 +1,5 @@
+openresty (1.11.2.1) jessie; urgency=medium
+
+  * initial debianize
+
+ -- Stephen Zhang <stephen@zhangcheng>  Tue, 1 Nov 2016 12:01:17 +0800

@@ -1,0 +1,30 @@
+Source: openresty
+Section: httpd
+Priority: optional
+Maintainer: Zhang Cheng <stephenpcg@gmail.com>
+Build-Depends: debhelper (>= 7.0.50~),
+               libssl-dev (>= 0.9.7),
+               libpcre3-dev,
+               zlib1g-dev,
+               libreadline-dev,
+               libncurses5-dev,
+               libssl-dev,
+               libxslt1-dev,
+               libgd-dev,
+               libgeoip-dev
+Standards-Version: 3.8.4
+Homepage: http://openresty.org/
+
+Package: openresty
+Architecture: any
+Provides: httpd, nginx
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Conflicts: nginx-light, nginx-full, nginx-extras, nginx-naxsi, nginx-common
+Replaces: nginx-light, nginx-full, nginx-extras, nginx-naxsi, nginx-common
+Suggests: geoip-database
+Description: OpenResty is a full-fledged web application server
+ OpenResty (aka. ngx_openresty) is a full-fledged web application server by
+ bundling the standard Nginx core, lots of 3rd-party Nginx modules,
+ as well as most of their external dependencies.
+ .
+ This package is built with default configure
