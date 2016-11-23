@@ -1,3 +1,10 @@
+openresty (1.11.2.2) jessie; urgency=medium
+
+  * update to version 1.11.2.2
+  * fix dh_installinit and dh_installlogrotate
+
+ -- Stephen Zhang <stephen@zhangcheng>  Tue, 22 Nov 2016 17:28:00 +0800
+
 openresty (1.11.2.1) jessie; urgency=medium
 
   * initial debianize

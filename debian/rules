@@ -86,30 +86,15 @@ install: mime-types
 	dh_installdirs
 	dh_install
 
-binary-indep: install
-	dh_testdir
-	dh_testroot
-	dh_installman -i
-	dh_installdocs -i
-	dh_installdebconf
-	dh_installexamples -i
-	dh_installinit -r -i --name=nginx
-	dh_installlogrotate --name=nginx
-	dh_link -i
-	dh_compress -i
-	dh_fixperms -i
-	dh_installdeb -i
-	dh_gencontrol -i
-	dh_md5sums -i
-	dh_builddeb -i
-
 binary-arch: install
 	dh_testdir
 	dh_testroot
 	dh_installdocs -i
 	dh_installdebconf
 	dh_installexamples -i
+	dh_systemd_enable --name=nginx
 	dh_installinit -r -i --name=nginx
+	dh_systemd_start --restart-after-upgrade
 	dh_installlogrotate --name=nginx
 	dh_link -aA
 	dh_compress -a
@@ -123,6 +108,6 @@ binary-arch: install
 	dh_md5sums -a
 	dh_builddeb -a
 
-binary: binary-indep binary-arch
+binary: binary-arch
 
 .PHONY: build clean binary-indep binary-arch binary install
